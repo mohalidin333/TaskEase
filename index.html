@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TaskEase</title>
+    <link rel="icon" href="/icon/edit.png">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/c06928fec1.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    
+    <!-- Container -->
+    <div class="container" id="container">
+
+        <!-- NavBar -->
+        <nav class="nav-bar">
+
+            <div class="nav-bar-container">
+                <span class="logo">
+                    <img src="icon/edit.png" alt="logo">
+                    <h2>TaskEase</h2>
+                </span>
+                <div class="burger" id="burger">
+                    <span><i class="fa-solid fa-bars"></i></span>   
+                </div>
+                <span id="closeMenu"><i class="fa-solid fa-xmark"></i></span>
+            </div>
+            
+        </nav>
+
+        <!-- Sub Container -->
+        <div class="sub-container">
+            
+            <!-- SideBar -->
+            <nav class="side-bar" id="sideBar">
+                <div class="side-bar-container">
+                    <div>
+                        <span class="logo">
+                            <img src="icon/edit.png" alt="logo">
+                            <h2>TaskEase</h2>
+                        </span>
+                    </div>        
+                    <ul class="nav-menu">
+                        <li class="active-menu" id="dashboard"><span><i class="fa-solid fa-chart-line"></i></span>Dashboard</li>
+                        <li class="active-menu" id="newTask"><span><i class="fa-solid fa-list-check"></i></span>New Task</li>
+                        <li class="active-menu" id="addCategory"><span><i class="fa-solid fa-layer-group"></i></span>Add Category</li>
+                    </ul>
+                </div>
+            </nav>
+
+            <!-- Main Content -->
+            <main class="main-content">
+                <div class="content-header">
+                    <label for="totalTask">Total Task: <span id="totalTask">0</span></label>
+                    <select id="displayCategory">
+                       <option value="">--Select Category--</option>
+                    </select>
+                </div>
+                <output class="content-displayer" id="contentDisplayer"></output>
+            </main>
+            
+        </div>
+        
+        <!-- Add Task Box -->
+        <div class="add-task-box" id="addTaskBox">
+            <span id="taskClose" title="Close"><i class="fa-solid fa-xmark"></i></span>
+            <form>
+                <div class="colors">
+                    <div class="color1" title="Pick Color"></div>
+                    <div class="color2" title="Pick Color"></div>
+                    <div class="color3" title="Pick Color"></div>
+                </div>
+                <input type="number" id="inputId" hidden>
+                <label for="inputTitle">Title:<span class="required">*</span></label>
+                <input type="text" id="inputTitle" placeholder="Enter Title">
+                <label for="selectCategory">Category:<span class="required">*</span></label>
+                <select name="" id="selectCategory">
+                    <option value="">--Select Category--</option>
+                </select>
+                <label for="inputDate">Due Date:<span class="required">*</span></label>
+                <input type="date" id="inputDate">
+                <label for="textDescription">Description (optional)</label>
+                <textarea id="textDescription" cols="30" rows="5" placeholder="Enter Description"></textarea>
+                <div class="btn-container">
+                    <div class="buttons">
+                        <button type="button" id="btnAdd">Add</button>
+                        <button type="button" id="btnUpdate">Update</button>
+                        <button type="button" id="btnCancel">Cancel</button>
+                    </div>
+                </div>
+            </form>
+         </div>
+
+         <!-- Add Category Box -->
+         <div class="add-category-box" id="addCategoryBox">
+            <span id="catClose"><i class="fa-solid fa-xmark"></i></span>
+            <form>
+               <label for="inputSaveCategory">New Category:</label>
+               <input type="text" id="inputSaveCategory" placeholder="Enter Category">
+               <button type="button" id="btnSaveCategory">Save</button>
+            </form>
+        </div>
+        
+        <!-- View Task Box-->
+        <div class="view-task-box">
+            <span id="viewClose"><i class="fa-solid fa-xmark"></i></span>
+            <p class="task-info">Task Info</p>
+            <div class="details">
+                <div class="detail1">
+                    <div class="sub-detail">
+                        <div>
+                            <span>TASK:</span>
+                            <p id="detailTask"></p>
+                        </div>
+                        <div>
+                            <span>DEADLINE:</span>
+                            <p id="detailDeadline"></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="detail2">
+                    <div>
+                        <span>BELONG TO:</span>
+                        <p id="detailBelongTo"></p>
+                    </div>
+                </div>
+                <div class="detail3">
+                    <span>WHAT TO DO:</span>
+                    <P id="detailWhatToDo"></P>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <script src="index.js"></script>
+</body>
+</html>
